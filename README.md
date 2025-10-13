@@ -373,13 +373,110 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 For support, email support@dreamify.app or open an issue on GitHub.
 
+## Screenshots
+
+Coming soon! The app includes:
+- Modern, intuitive home screen
+- Real-time image generation interface
+- Gallery with grid and list views
+- Settings and subscription management
+
+## Roadmap
+
+- [x] Core architecture implementation
+- [x] Gemini 2.5 Flash Image API integration
+- [x] Android build configuration
+- [ ] Firebase integration (Analytics, Crashlytics)
+- [ ] Local storage with Hive
+- [ ] In-app purchases implementation
+- [ ] Permission handling
+- [ ] Image export and sharing
+- [ ] Multi-language support (Hebrew, English)
+- [ ] iOS App Store release
+- [ ] Android Play Store release
+
+## API Documentation
+
+This app uses the **Gemini 2.5 Flash Image API** for AI-powered image generation.
+
+**Key Features:**
+- Text-to-image generation
+- Image editing with natural language
+- Multi-image composition (up to 3 images)
+- Automatic SynthID watermarking
+- Multiple aspect ratios (1:1, 16:9, 9:16, 4:3, 3:4)
+
+**API Endpoint:**
+```
+https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent
+```
+
+**Request Format:**
+```json
+{
+  "contents": [{
+    "parts": [
+      {"text": "Your prompt here"}
+    ]
+  }],
+  "generationConfig": {
+    "responseModalities": ["image"],
+    "imageConfig": {
+      "aspectRatio": "16:9"
+    }
+  }
+}
+```
+
+## Troubleshooting
+
+### Build Issues
+
+**Android Build Fails:**
+- Ensure Gradle 8.10.2+ is installed
+- Clean the project: `flutter clean`
+- Remove Gradle cache: `rm -rf android/.gradle`
+- Rebuild: `flutter build apk`
+
+**iOS Build Fails:**
+- Run `pod install` in the `ios/` directory
+- Clean build: `flutter clean && cd ios && pod install`
+- Open in Xcode and build from there
+
+### API Issues
+
+**Images not generating:**
+- Verify your Gemini API key is set correctly
+- Check API key has proper permissions
+- Ensure you're on the correct pricing tier
+- Check network connectivity
+
+## Performance
+
+The app is optimized for:
+- Smooth 60fps UI rendering
+- Efficient image caching
+- Background image processing using isolates
+- Minimal battery consumption
+
+## Security
+
+- API keys stored securely
+- No sensitive data stored locally
+- HTTPS-only communication
+- SynthID watermarking on generated images
+
 ## Acknowledgments
 
-- Gemini API for AI-powered generation
-- Flutter team for the amazing framework
-- Riverpod for state management
+- **Gemini API** for AI-powered image generation
+- **Flutter team** for the amazing framework
+- **Riverpod** for state management
 - All open-source contributors
+
+## Repository
+
+**GitHub:** https://github.com/evyasafm/Dreamify
 
 ---
 
-**Built with ❤️ using Flutter**
+**Built with ❤️ using Flutter and Gemini 2.5 Flash Image API**
