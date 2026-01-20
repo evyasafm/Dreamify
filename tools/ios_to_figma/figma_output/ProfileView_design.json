@@ -1,0 +1,206 @@
+{
+  "nodes": [
+    {
+      "type": "TEXT",
+      "name": "Text: John Doe",
+      "characters": "John Doe",
+      "fontSize": 28,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0
+          }
+        }
+      ],
+      "fontWeight": 700
+    },
+    {
+      "type": "TEXT",
+      "name": "Text: iOS Developer & Desi",
+      "characters": "iOS Developer & Designer",
+      "fontSize": 15,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": {
+            "r": 0.557,
+            "g": 0.557,
+            "b": 0.576
+          }
+        }
+      ]
+    },
+    {
+      "type": "TEXT",
+      "name": "Text: 128",
+      "characters": "128",
+      "fontSize": 17,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0
+          }
+        }
+      ],
+      "fontWeight": 700
+    },
+    {
+      "type": "TEXT",
+      "name": "Text: Posts",
+      "characters": "Posts",
+      "fontSize": 12,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": {
+            "r": 0.557,
+            "g": 0.557,
+            "b": 0.576
+          }
+        }
+      ]
+    },
+    {
+      "type": "TEXT",
+      "name": "Text: 2.5K",
+      "characters": "2.5K",
+      "fontSize": 17,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0
+          }
+        }
+      ],
+      "fontWeight": 700
+    },
+    {
+      "type": "TEXT",
+      "name": "Text: Followers",
+      "characters": "Followers",
+      "fontSize": 12,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": {
+            "r": 0.557,
+            "g": 0.557,
+            "b": 0.576
+          }
+        }
+      ]
+    },
+    {
+      "type": "TEXT",
+      "name": "Text: 342",
+      "characters": "342",
+      "fontSize": 17,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0
+          }
+        }
+      ],
+      "fontWeight": 700
+    },
+    {
+      "type": "TEXT",
+      "name": "Text: Following",
+      "characters": "Following",
+      "fontSize": 12,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": {
+            "r": 0.557,
+            "g": 0.557,
+            "b": 0.576
+          }
+        }
+      ]
+    },
+    {
+      "type": "TEXT",
+      "name": "Text: Edit Profile",
+      "characters": "Edit Profile",
+      "fontSize": 17,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          }
+        }
+      ],
+      "width": 200.0,
+      "height": 50.0
+    },
+    {
+      "type": "FRAME",
+      "name": "Button",
+      "width": 120,
+      "height": 44,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": {
+            "r": 0.0,
+            "g": 0.478,
+            "b": 1.0
+          }
+        }
+      ],
+      "cornerRadius": 8
+    },
+    {
+      "type": "FRAME",
+      "name": "VStack",
+      "width": 200,
+      "height": 200,
+      "layoutMode": "VERTICAL",
+      "itemSpacing": 20.0
+    },
+    {
+      "type": "FRAME",
+      "name": "HStack",
+      "width": 200,
+      "height": 200,
+      "layoutMode": "HORIZONTAL",
+      "itemSpacing": 30.0
+    },
+    {
+      "type": "RECTANGLE",
+      "name": "Circle",
+      "width": 120.0,
+      "height": 120.0,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": {
+            "r": 0.557,
+            "g": 0.557,
+            "b": 0.576
+          }
+        }
+      ],
+      "cornerRadius": 50
+    }
+  ],
+  "version": "1.0.0",
+  "generator": "iOS-to-Figma Converter"
+}

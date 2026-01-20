@@ -381,11 +381,42 @@ Coming soon! The app includes:
 - Gallery with grid and list views
 - Settings and subscription management
 
+## Developer Tools
+
+### iOS to Figma Converter
+
+A powerful tool that converts iOS native code (SwiftUI/UIKit) into Figma designs programmatically.
+
+**Location:** `tools/ios_to_figma/`
+
+**Features:**
+- Parse SwiftUI and UIKit code
+- Extract UI components and styling
+- Generate Figma Plugin code for design creation
+- Export design specifications as JSON
+- Create HTML previews of components
+
+**Quick Start:**
+```bash
+cd tools/ios_to_figma
+pip install -r requirements.txt
+python ios_to_figma.py examples/ProfileView.swift
+```
+
+**See full documentation:** [tools/ios_to_figma/README.md](tools/ios_to_figma/README.md)
+
+This tool enables designers and developers to:
+- Quickly prototype iOS designs in Figma
+- Maintain design-code consistency
+- Generate design specs from existing code
+- Accelerate the design handoff process
+
 ## Roadmap
 
 - [x] Core architecture implementation
 - [x] Gemini 2.5 Flash Image API integration
 - [x] Android build configuration
+- [x] iOS to Figma converter tool
 - [ ] Firebase integration (Analytics, Crashlytics)
 - [ ] Local storage with Hive
 - [ ] In-app purchases implementation
