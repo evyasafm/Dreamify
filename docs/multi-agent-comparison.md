@@ -41,3 +41,79 @@ When working with Claude Code, there are two strategies for orchestrating multip
 
 - **Built-in** prioritizes simplicity and speed, but agents share a limited context window
 - **MCP claude-teams** provides full isolation and observability, but requires more setup and maintenance
+
+## Usage Guide
+
+### 1. Built-in Agent Teams
+
+Enable in `.claude/settings.json`:
+
+```json
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "teammateMode": "auto"
+}
+```
+
+Then ask Claude in natural language to create a team:
+
+```
+Create an agent team:
+- One teammate to review security
+- One teammate to optimize performance
+- One teammate to write tests
+```
+
+Keyboard shortcuts:
+- **Shift+Up/Down** — switch between teammates
+- **Type + Enter** — send a direct message to a teammate
+- **Ctrl+T** — view shared task list
+
+Clean up when done: `Clean up the team`
+
+### 2. Subagents (lightweight)
+
+Create an agent file at `~/.claude/agents/my-agent.md`:
+
+```markdown
+---
+name: my-agent
+description: Description of what this agent does
+tools: Read, Grep, Glob, Bash
+model: sonnet
+---
+
+System prompt for the agent goes here.
+```
+
+Then invoke: `Use the my-agent agent on this project`
+
+Or create interactively: `/agents` → "Create new agent"
+
+### 3. MCP claude-teams
+
+Install prerequisites:
+
+```bash
+sudo apt-get install tmux   # Linux
+brew install tmux            # macOS
+```
+
+Add the MCP server:
+
+```bash
+claude mcp add --transport stdio claude-teams -- \
+  uvx --from git+https://github.com/cs50victor/claude-code-teams-mcp claude-teams
+```
+
+Set teammate mode to tmux in `.claude/settings.json`:
+
+```json
+{
+  "teammateMode": "tmux"
+}
+```
+
+Watch agents live: `tmux attach`
